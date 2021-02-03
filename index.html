@@ -4,16 +4,27 @@
         <meta charset="UTF-8">
         <link href="css/style.css" rel="stylesheet">
         <title>Dr. Strange</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="node_modules/rellax/rellax.min.js"></script>
         <script type="text/javascript" src="js/drstrange.js"></script>
     </head>
     <body>
+        <div id="content">
+        <div id="fullscreen-bg"></div>
         <div class="container">
-            <div class="card">
+            <div class="card fullscreenable" data-fullscreen="#f1">
+                <img src="assets/img/header-1.jpg">
                 <div class="container">
                     <p>Everyone wonders why we even oughta care about him at all...!</p>
                 </div>
             </div>
+        </div>
+        </div>
+        <div id="cards">
+            <div class="fullscreen-card" id="f1">
+                <p>Test</p>
+            </div>
+        </div>
     </body>
 </html>

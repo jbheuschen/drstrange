@@ -81,5 +81,24 @@ $border-radius: 5px;
 }
 
 .card img {
+  border-top-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+}
+
+.fullscreen-card {
+  display: none;
+  position: fixed;
+  top: 25vh;
+  margin: 0 auto;
+  padding: 10px;
+  z-index: 50;
+  background: #FFFFFF;
+  border: $tint 1px solid;
   border-radius: $border-radius;
+  width: 50vw;
+}
+
+.blurred {
+  filter: blur(6px);
+  transition: 0.5s;
 }
