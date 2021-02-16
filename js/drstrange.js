@@ -11,4 +11,7 @@ $(document).ready(function() {
       l.toggleClass('fullscreened');
       $("#content").toggleClass("blurred")
    });
+   $(".parallax").each(function(i) {
+      $(this).css('background-image', 'url(' + $(this).data('img') + ')')
+   });
 });

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "rellax": "^1.12.1"
   }
 }
