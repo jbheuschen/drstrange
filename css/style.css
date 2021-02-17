@@ -6,6 +6,11 @@ body {
   margin: 0;
   background: #1c1c28;
   color: #FFFFFE;
+  overflow-x: hidden;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 /*
@@ -353,6 +358,21 @@ body {
   width: 100%;
   text-align: center;
   z-index: 100;
+}
+
+#scrolldown i {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  transition: all 0.2s ease-in-out;
+}
+
+#scrolldown {
+  transition: all 0.2s ease-in-out;
+}
+
+#scrolldown i:hover {
+  transform: scale(1.1);
 }
 
 /*
