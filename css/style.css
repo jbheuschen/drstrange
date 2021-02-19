@@ -4,8 +4,8 @@
  */
 body {
   margin: 0;
-  background: #1c1c28;
-  color: #FFFFFE;
+  background: #FFF;
+  color: #000;
   overflow-x: hidden;
 }
 
@@ -270,7 +270,7 @@ body {
 }
 
 .navigation-border {
-  border-left-color: #9e9e9e;
+  border-left-color: #293042;
   border-left-style: solid;
   border-left-width: 1px;
   margin-top: 10px;
@@ -349,9 +349,9 @@ body {
   left: 25%;
   width: 50%;
   padding: 5px 15px;
-  background: #1c1c28;
   border-radius: 5px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px) brightness(70%);
+  -webkit-backdrop-filter: blur(6px) brightness(70%);
 }
 
 .jumbotron .isle h1 {
@@ -386,12 +386,188 @@ body {
   background-size: cover;
 }
 
+.parallax.blurable {
+  transition: all 0.2s ease-in-out;
+}
+
+.parallax.blurable:hover {
+  filter: blur(6px) brightness(70%);
+}
+
+/*
+  Image Captions
+ */
+.blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax.blurable:hover .blur {
+  filter: blur(6px) brightness(70%);
+}
+
+.blurable .img-caption {
+  display: none;
+}
+
+.blurable:hover .img-caption {
+  display: block;
+}
+
+.img-caption p {
+  text-align: center;
+  width: 100%;
+}
+
 /*
   Container
  */
 .contained {
   margin-left: 5vw;
   margin-right: 5vw;
+}
+
+.contained-by-padding {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+/*
+  Navigation
+ */
+nav#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 55px;
+  background: #0a0a0e;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+nav ul li {
+  height: 100%;
+  float: left;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a {
+  padding: 15px 10px;
+  color: #000;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  background: #1c1c28;
+}
+
+nav ul li a:hover {
+  background: #1c1c28;
+}
+
+#navbar {
+  display: none;
+}
+
+/*
+  Sidebar
+ */
+#sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #293042;
+  padding: 10px 20px;
+  color: #FFFFFE;
+  box-shadow: 0 0 10px #0a0a0e;
+}
+
+#sidebar h2:first-of-type {
+  font-size: 40px;
+  font-family: "Chela One";
+}
+
+#sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar ul li {
+  display: block;
+}
+
+#sidebar ul li a {
+  padding: 15px 10px;
+  color: #FFFFFE;
+  display: block;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#sidebar ul li a.active {
+  background: #1c1c28;
+}
+
+#sidebar ul li a:hover {
+  background: #1c1c28;
+  transform: translateX(2);
+}
+
+#content * {
+  margin-right: 250px;
+}
+
+/*
+  Content
+ */
+section {
+  overflow: auto;
+  box-shadow: 0 0 10px #0a0a0e;
+}
+
+section h1:first-of-type, h2:first-of-type {
+  font-size: 50px;
+}
+
+.dropcap:first-letter {
+  color: #903;
+  float: left;
+  font-family: Georgia, serif;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+/*
+  Footer
+ */
+footer {
+  background: #0a0a0e;
+  min-height: 300px;
+  width: 100vw;
+}
+
+footer .credit {
+  width: 100%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

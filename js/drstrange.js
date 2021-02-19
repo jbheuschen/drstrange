@@ -1,6 +1,9 @@
 var rellax = new Rellax(".parallax")
 
 $(document).ready(function() {
+   $("#sidebar").hide();
+   $("#opener").show();
+   $(this).scrollTop(0);
    $(".fullscreenable").click(function(e) {
       let l = $($(this).data('fullscreen'));
       if(l.hasClass('fullscreened')) {
@@ -14,20 +17,20 @@ $(document).ready(function() {
    $(".parallax").each(function(i) {
       $(this).css('background-image', 'url(' + $(this).data('img') + ')')
    });
-   $("#scrolldown").click(function(e) {
-      $("body,html").animate({
-         scrollTop: $("#content").offset().top
-      },800, "swing", function() {
-         $("body").removeClass("no-scroll");
-      })
-   });
-   $(window).scroll(function() {
-      if($(this).scrollTop() <= $("#opener").height() && !$("body").hasClass("no-scroll")) {
-         $("body,html").animate({
-            scrollTop: 0
-         },800, "swing", function() {
-            $("body").addClass("no-scroll");
-         })
-      }
+   $(".blurable").each(function(i) {
+      let caption = $(this).data('caption');
+      $(this).append(
+          '<div class="img-caption">' +
+          '<p>' + caption + '</p>' +
+          '</div>' +
+          '<div class="blur"></div>'
+      );
    })
+   $("#scrolldown").click(function(e) {
+      $("#opener").fadeOut(function() {
+         $("#navbar").fadeIn();
+         $("#sidebar").fadeIn();
+      });
+      $("body").removeClass("no-scroll");
+   });
 });
