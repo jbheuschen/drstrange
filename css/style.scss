@@ -8,6 +8,7 @@ $foreground: #000;
 $secondaryForeground: #FFFFFE;
 
 $active: $quartiary;
+$notActive: #afafaf;
 $nav-hover: $quartiary;
 
 $tint: rgba(0,0,0,0.2);
@@ -48,6 +49,14 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 20px;
+}
+
+.equal-height {
+  grid-auto-rows: 1fr;
+}
+
+.equal-height > [class*="col-"] {
+  height: 100%;
 }
 
 @for $i from 1 through 12 {
@@ -105,13 +114,32 @@ body {
   box-shadow: 0 8px 16px 0 $tint;
 }
 
+[class*="col-"] .card {
+  height: 100%;
+}
+
 .card .container {
   padding: 2px 16px;
 }
 
-.card img {
+.card img:first-of-type {
   border-top-right-radius: $border-radius;
   border-top-left-radius: $border-radius;
+  max-width: 100%;
+}
+
+.card-body, .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+  padding: 10px 15px;
+}
+
+.card-body dl dt {
+  font-weight: bold;
+}
+
+* > .row:not(:only-of-type) {
+  &:not(:first-of-type) {
+    margin-top: 10px;
+  }
 }
 
 .fullscreen-card {
@@ -249,7 +277,6 @@ body {
 
 .contained-by-padding {
   margin-left: 0 !important;
-  margin-right: 0 !important;
   padding-left: $container-inset;
   padding-right: $container-inset;
 }
@@ -337,7 +364,7 @@ $sidebar-width: 250px;
 
 #sidebar ul li a {
   padding: 15px 10px;
-  color: $secondaryForeground;
+  color: $notActive;
   display: block;
   text-decoration: none;
   transition: all .2s ease-in-out;
@@ -345,14 +372,16 @@ $sidebar-width: 250px;
 
 #sidebar ul li a.active {
   background: $active;
+  color: $secondaryForeground;
 }
 
 #sidebar ul li a:hover {
   background: $nav-hover;
+  color: $secondaryForeground;
   transform: translateX(2);
 }
 
-#content * {
+#content > * {
   margin-right: $sidebar-width;
 }
 
@@ -363,14 +392,19 @@ $sidebar-width: 250px;
 section {
   overflow:auto;
   box-shadow: 0 0 10px $tertiary;
+  padding: 5px 0 20px 0;
 }
 
 section h1:first-of-type, h2:first-of-type {
   font-size: 50px;
 }
 
+section h1:first-of-type, section h2:first-of-type, section h3:first-of-type, section h4:first-of-type, section h5:first-of-type, section h6:first-of-type {
+  text-align: center;
+}
+
 .dropcap:first-letter {
-  color: #903;
+  color: $secondary;
   float: left;
   font-family: Georgia, serif;
   font-size: 75px;
@@ -378,6 +412,10 @@ section h1:first-of-type, h2:first-of-type {
   padding-top: 4px;
   padding-right: 8px;
   padding-left: 3px;
+}
+
+.dark {
+  color: $secondaryForeground;
 }
 
 /*
