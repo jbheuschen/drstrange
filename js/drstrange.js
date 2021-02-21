@@ -33,4 +33,11 @@ $(document).ready(function() {
       });
       $("body").removeClass("no-scroll");
    });
+   $(window).scroll(function() {
+      $("section").each(function() {
+         if($(window).scrollTop() > $(this).offset().top) {
+            $("a[href=" + $(this).attr('id') + "]").toggleClass('active');
+         }
+      });
+   });
 });

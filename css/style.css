@@ -7,6 +7,7 @@ body {
   background: #FFF;
   color: #000;
   overflow-x: hidden;
+  font-family: Helvetica, sans-serif;
 }
 
 .no-scroll {
@@ -37,6 +38,9 @@ body {
   height: 100%;
 }
 
+/*
+  SASS-generated
+ */
 .col-1 {
   grid-column: span 1;
 }
@@ -46,6 +50,17 @@ body {
     grid-column: span 1;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-1 {
+    height: $i%;
+  }
+  .w-1 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-1 {
     grid-column: span 1;
@@ -65,6 +80,17 @@ body {
     grid-column: span 2;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-2 {
+    height: $i%;
+  }
+  .w-2 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-2 {
     grid-column: span 2;
@@ -84,6 +110,17 @@ body {
     grid-column: span 3;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-3 {
+    height: $i%;
+  }
+  .w-3 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-3 {
     grid-column: span 3;
@@ -103,6 +140,17 @@ body {
     grid-column: span 4;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-4 {
+    height: $i%;
+  }
+  .w-4 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-4 {
     grid-column: span 4;
@@ -122,6 +170,17 @@ body {
     grid-column: span 5;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-5 {
+    height: $i%;
+  }
+  .w-5 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-5 {
     grid-column: span 5;
@@ -141,6 +200,17 @@ body {
     grid-column: span 6;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-6 {
+    height: $i%;
+  }
+  .w-6 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-6 {
     grid-column: span 6;
@@ -160,6 +230,17 @@ body {
     grid-column: span 7;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-7 {
+    height: $i%;
+  }
+  .w-7 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-7 {
     grid-column: span 7;
@@ -179,6 +260,17 @@ body {
     grid-column: span 8;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-8 {
+    height: $i%;
+  }
+  .w-8 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-8 {
     grid-column: span 8;
@@ -198,6 +290,17 @@ body {
     grid-column: span 9;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-9 {
+    height: $i%;
+  }
+  .w-9 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-9 {
     grid-column: span 9;
@@ -217,6 +320,17 @@ body {
     grid-column: span 10;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-10 {
+    height: $i%;
+  }
+  .w-10 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-10 {
     grid-column: span 10;
@@ -236,6 +350,17 @@ body {
     grid-column: span 11;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-11 {
+    height: $i%;
+  }
+  .w-11 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-11 {
     grid-column: span 11;
@@ -255,6 +380,17 @@ body {
     grid-column: span 12;
   }
 }
+/*@for $i from 1 through 100 {
+  .h-12 {
+    height: $i%;
+  }
+  .w-12 {
+    width: $i%;
+  }
+}*/
+/*
+  End-SASS-generated
+ */
 @media (min-width: 992px) {
   .col-md-12 {
     grid-column: span 12;
@@ -306,10 +442,19 @@ body {
   padding: 2px 16px;
 }
 
+.card .yt {
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
 .card img:first-of-type {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   max-width: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card-body, .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
@@ -570,6 +715,7 @@ section {
 
 section h1:first-of-type, h2:first-of-type {
   font-size: 50px;
+  font-family: "Chela One";
 }
 
 section h1:first-of-type, section h2:first-of-type, section h3:first-of-type, section h4:first-of-type, section h5:first-of-type, section h6:first-of-type {
@@ -603,6 +749,25 @@ footer {
 footer .credit {
   width: 100%;
   text-align: center;
+}
+
+/*
+  Tables
+ */
+table.info tr td:first-of-type {
+  font-weight: bold;
+}
+
+/*
+  Card List
+ */
+.card ol > li {
+  font-weight: bold;
+}
+
+.card ol > li > abbr, .card ol > li > p {
+  font-weight: normal;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
