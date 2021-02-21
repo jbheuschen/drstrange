@@ -70,33 +70,37 @@ body {
     grid-column: span $i;
   }
   @media (min-width: 768px) {
-  .col-sm-#{$i} {
-    grid-column: span $i;
+    .col-sm-#{$i} {
+      grid-column: span $i;
+    }
+  }
+  @media (min-width: 992px) {
+    .col-md-#{$i} {
+      grid-column: span $i;
+    }
+  }
+  @media(min-width: 1200px) {
+    .col-lg-#{$i} {
+      grid-column: span $i;
+    }
   }
 }
-/*@for $i from 1 through 100 {
-  .h-#{$i} {
-    height: $i%;
-  }
-  .w-#{$i} {
-    width: $i%;
-  }
-}*/
+//
+//--- removed due to the resulting css file having more than 10.000 lines ---
+//@for $i from 1 through 100 {
+//  .h-#{$i} {
+//    height: $i * 1%;
+//  }
+//  .w-#{$i} {
+//    width: $i * 1%;
+//  }
+//}
+//
 
 /*
   End-SASS-generated
  */
-@media (min-width: 992px) {
-  .col-md-#{$i} {
-    grid-column: span $i;
-  }
-}
-@media(min-width: 1200px) {
-  .col-lg-#{$i} {
-    grid-column: span $i;
-  }
-}
-}
+
 
 /*
   Navigation
