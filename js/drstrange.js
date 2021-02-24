@@ -1,10 +1,8 @@
-var rellax = new Rellax(".parallax")
-
 $(document).ready(function() {
    $("#sidebar").hide();
    $("#opener").show();
    $(this).scrollTop(0);
-   $(".fullscreenable").click(function(e) {
+   /*$(".fullscreenable").click(function(e) {
       let l = $($(this).data('fullscreen'));
       if(l.hasClass('fullscreened')) {
           l.fadeOut();
@@ -13,11 +11,11 @@ $(document).ready(function() {
       }
       l.toggleClass('fullscreened');
       $("#content").toggleClass("blurred")
-   });
+   });*/
    $(".parallax").each(function(i) {
       $(this).css('background-image', 'url(' + $(this).data('img') + ')')
    });
-   $(".blurable").each(function(i) {
+   /*$(".blurable").each(function(i) {
       let caption = $(this).data('caption');
       $(this).append(
           '<div class="img-caption">' +
@@ -25,7 +23,7 @@ $(document).ready(function() {
           '</div>' +
           '<div class="blur"></div>'
       );
-   })
+   })*/
    $("#scrolldown").click(function(e) {
       $("#opener").fadeOut(function() {
          $("#navbar").fadeIn();
